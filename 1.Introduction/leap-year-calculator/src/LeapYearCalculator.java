@@ -23,7 +23,7 @@ public class LeapYearCalculator {
                 System.out.printf("%d Leap Year",year);
             }
         } else {
-            System.out.printf("Not Leap Year",year);
+            System.out.printf("%d Not Leap Year",year);
         }
         scanner.close();
     }
