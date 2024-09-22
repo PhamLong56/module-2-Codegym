@@ -22,5 +22,11 @@ public class Main {
         rectangle = new Rectangle("red",false,2,3);
         System.out.println(rectangle);
 
+        Square square = new Square();
+        System.out.println(square);
+        square = new Square("pink",true,2);
+        System.out.println(square);
+
+
     }
 }

@@ -38,4 +38,10 @@ public class Rectangle extends Shape {
     public void setHeight(double height) {
         this.height = height;
     }
+    public double getArea() {
+        return width * height;
+    }
+    public double getPerimeter() {
+        return (width + height)*2;
+    }
 }
