@@ -104,9 +104,9 @@ public class ProductManagement {
         String name = scanner.nextLine().toLowerCase();
 
         boolean found = false;
-        System.out.println("--------------------------KẾT QUẢ TÌM KIẾM------------------------------");
+        System.out.println("--------------------KẾT QUẢ TÌM KIẾM-----------------------");
         System.out.printf("%-10s%-20s%-10s%-10s\n", "ID", "Tên Sản Phẩm", "Giá", "Mô Tả");
-        System.out.println("-----------------------------------------------------------------------");
+        System.out.println("--------------------------END------------------------------");
 
 
         for (Product product : products) {

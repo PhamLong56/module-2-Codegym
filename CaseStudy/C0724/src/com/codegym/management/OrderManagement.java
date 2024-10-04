@@ -40,24 +40,33 @@ public class OrderManagement {
                 }
                 System.out.println("Nhập số lượng cần mua");
                 int quantity = scanner.nextInt();
-                Product product = null;
-                for (Product p : ProductManagement.getProducts()) {
-                    if (p.getId().equals(productId)) {
-                        product = p;
+                scanner.nextLine();
+
+                Product product = findProductById(productId);
+                if (product == null) {
+                    System.out.println("Sản phẩm không tồn tại");
+                    continue;
+                }
+
+                OrderDetail existingDetail = null;
+                for (OrderDetail orderDetail : order.getOrderDetails()) {
+                    if (orderDetail.getProductId().equals(productId)) {
+                        existingDetail = orderDetail;
                         break;
                     }
                 }
-                if (product == null) {
-                    System.out.println("Mã sản phẩm không tồn tại");
-                    continue;
+                if (existingDetail != null) {
+                    existingDetail.setQuantity(existingDetail.getQuantity() + quantity);
+
+                } else {
+                    OrderDetail orderDetail = new OrderDetail();
+                    orderDetail.setProductId(productId);
+                    orderDetail.setPrice(product.getPrice());
+                    orderDetail.setQuantity(quantity);
+                    orderDetail.setOrderId(order.getIdOrder());
+                    orderDetail.setOrderDetailId(order.getOrderDetails().size()+1);
+                    order.getOrderDetails().add(orderDetail);
                 }
-                OrderDetail orderDetail = new OrderDetail();
-                orderDetail.setProductId(productId);
-                orderDetail.setPrice(product.getPrice());
-                orderDetail.setQuantity(quantity);
-                orderDetail.setOrderId(order.getIdOrder());
-                orderDetail.setOrderDetailId(1);
-                order.getOrderDetails().add(orderDetail);
             }
             orders.add(order);
 
@@ -70,9 +79,12 @@ public class OrderManagement {
 
     }
     public static void showOrder() {
-        System.out.println("--------------Danh sách đặt hàng-------------");
+        System.out.println("--------------ĐƠN HÀNG-------------");
 
         for (Order order : OrderManagement.getOrders()) {
+
+
+
             String customerInfo = String.format("ID đơn: %s, Tên khách hàng: %s, Số điện thoại: %s, Email: %s",
                     order.getIdOrder(),
                     order.getCustomerName(),
@@ -81,13 +93,14 @@ public class OrderManagement {
             );
             System.out.println(customerInfo);
             System.out.printf("%-5s%-20s%-10s%-10s\n", "STT", "Tên Sản Phẩm", "Giá", "Số Lượng");
+            System.out.println("----------------------------------------------------");
 
             int i = 1;
             double totalOrderPrice = 0;
 
             for (OrderDetail od : order.getOrderDetails()) {
                 if (od.getProductId() != null) {
-                    System.out.println("Đang tìm kiếm sản phẩm với ID: " + od.getProductId());
+                    System.out.println("----------------------------------------------------");
                     Product product = findProductById(od.getProductId());
                     if (product != null) {
                         double itemPrice = od.getPrice() * od.getQuantity();
@@ -102,7 +115,7 @@ public class OrderManagement {
                     System.out.println("Sản phẩm không tồn tại!");
                 }
             }
-
+            System.out.println("----------------------------------------------------");
             System.out.printf("Tổng tiền của đơn: %.2f\n", totalOrderPrice);
             System.out.println();
         }
