@@ -8,7 +8,7 @@ public class Order {
     private String customerName;
     private String customerPhone;
     private String customerEmail;
-    private List<Product> productList = new ArrayList<>();
+    private List<OrderDetail> orderDetails = new ArrayList<>();
 
 
     public Order(Integer idOrder, String customerName, String customerPhone, String customerEmail) {
@@ -50,12 +50,12 @@ public class Order {
         this.customerEmail = customerEmail;
     }
 
-    public List<Product> getProductList() {
-        return productList;
+    public List<OrderDetail> getOrderDetails() {
+        return orderDetails;
     }
 
-    public void setProductList(List<Product> productList) {
-        this.productList = productList;
+    public void setOrderDetails(List<OrderDetail> orderDetails) {
+        this.orderDetails = orderDetails;
     }
 
     @Override
@@ -65,7 +65,7 @@ public class Order {
                 ", customerName='" + customerName + '\'' +
                 ", customerPhone='" + customerPhone + '\'' +
                 ", customerEmail='" + customerEmail + '\'' +
-                ", productList=" + productList +
+                ", productList=" + orderDetails +
                 '}';
     }
 }

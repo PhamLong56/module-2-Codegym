@@ -10,6 +10,11 @@ import java.util.Scanner;
 public class ProductManagement {
     private static List<Product> products = new ArrayList<Product>();
 
+    public static List<Product> getProducts() {
+        return products;
+    }
+
+
     public static void addProduct() {
 
         try {

@@ -7,9 +7,10 @@ import java.util.Scanner;
 
 public class ProductMenu {
     public static void displayProductMenu() {
-        Scanner scanner = new Scanner(System.in);
 
-        while (true) {
+        Scanner scanner = new Scanner(System.in);
+        boolean isExit = false;
+        while (!isExit) {
             System.out.println("\n1. Thêm sản phẩm");
             System.out.println("2. Hiển thị danh sách sản phẩm");
             System.out.println("3. Xóa sản phẩm");
@@ -37,7 +38,7 @@ public class ProductMenu {
                     ProductManagement.searchProduct();
                     break;
                 case 0:
-                    System.exit(0);
+                    isExit = true;
                     break;
                 default:
                     break;
