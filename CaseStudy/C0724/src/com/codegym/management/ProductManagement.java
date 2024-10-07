@@ -1,6 +1,7 @@
 package com.codegym.management;
 
 import com.codegym.entity.Product;
+import com.codegym.file.ProductFile;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -14,6 +15,9 @@ public class ProductManagement {
         return products;
     }
 
+    public static void setProducts(List<Product> products) {
+        ProductManagement.products = products;
+    }
 
     public static void addProduct() {
 
@@ -40,9 +44,9 @@ public class ProductManagement {
             Double price = scanner.nextDouble();
             products.add(new Product(type, name, description, price));
             System.out.println("Đã thêm thành công!!!!");
+            ProductFile.saveToFile(products);
 
-        } catch (
-                InputMismatchException ei) {
+        } catch (InputMismatchException ei) {
             System.out.println("Bạn đã nhập sai giá trị, xin nhập lại");
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -80,6 +84,7 @@ public class ProductManagement {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Nhập ID sản phẩm cần cập nhật: ");
         String idToUpdate = scanner.nextLine();
+
         for (Product product : products) {
             if (product.getId().equals(idToUpdate)) {
                 System.out.print("Nhập tên mới: ");
@@ -93,6 +98,7 @@ public class ProductManagement {
                 product.setDescription(newDescription);
                 product.setPrice(newPrice);
                 System.out.println("Đã cập nhật thành công");
+                ProductFile.saveToFile(products);
             }else {
                 System.out.println("Id: " + idToUpdate + " không có trong menu");
             }

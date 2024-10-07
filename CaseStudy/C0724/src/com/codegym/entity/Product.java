@@ -26,6 +26,15 @@ public class Product {
         this.description = description;
         this.price = price;
     }
+
+    public Product(String id, String name, Double price, String description, String type) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.description = description;
+        this.type = type;
+    }
+
     private String generateId(String type) {
         if(type.equals("D")){
             return "D" + String.format("%03d", idDrinkCounter++);

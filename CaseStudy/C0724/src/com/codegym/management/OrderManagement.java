@@ -4,6 +4,7 @@ package com.codegym.management;
 import com.codegym.entity.Order;
 import com.codegym.entity.OrderDetail;
 import com.codegym.entity.Product;
+import com.codegym.file.OrderFile;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -69,6 +70,7 @@ public class OrderManagement {
                 }
             }
             orders.add(order);
+            OrderFile.saveToFile(orders);
 
         } catch (InputMismatchException ei) {
             System.out.println("Bạn đã nhập sai giá trị vui lòng nhập lại");

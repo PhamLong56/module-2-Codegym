@@ -60,12 +60,11 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Order{" +
-                "idOrder=" + idOrder +
-                ", customerName='" + customerName + '\'' +
-                ", customerPhone='" + customerPhone + '\'' +
-                ", customerEmail='" + customerEmail + '\'' +
-                ", productList=" + orderDetails +
+        return "Đơn hàng-" + idOrder +
+                "Tên-" + customerName + '\'' +
+                "Phone-" + customerPhone + '\'' +
+                ", Email='" + customerEmail + '\'' +
+                ", Danh sách đặt hàng=" + orderDetails +
                 '}';
     }
 }

@@ -47,4 +47,13 @@ public class OrderDetail {
     public void setPrice(Double price) {
         this.price = price;
     }
+
+    @Override
+    public String toString() {
+        return "{" + " Mã sản phẩm: " + productId + '\'' +
+        ", số lượng: " + quantity +
+                ", giá =" + price +'}';
+
+
+    }
 }

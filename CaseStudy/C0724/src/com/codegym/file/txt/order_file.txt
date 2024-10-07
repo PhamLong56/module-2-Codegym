@@ -1,0 +1,1 @@
+1-Long-090453-long@gmail.com-[{ Mã sản phẩm: D001', số lượng: 2, giá =25000.0}, { Mã sản phẩm: D002', số lượng: 1, giá =30000.0}, { Mã sản phẩm: F001', số lượng: 2, giá =15000.0}]|
