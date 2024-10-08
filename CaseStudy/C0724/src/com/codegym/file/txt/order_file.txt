@@ -1,1 +1,2 @@
-DH001-Long-090909-long@-[{ Mã sản phẩm: D002', số lượng: 2, giá =30000.0}, { Mã sản phẩm: F002', số lượng: 2, giá =2000.0}]|
+DH001-Long-090909-long@gmail.com-D002-20000.0-2-D003-15000.0-2-|
+DH002-Tuan-035789-tuan@gmail.com-D002-20000.0-1-F001-5000.0-2-|

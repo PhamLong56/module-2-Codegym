@@ -73,6 +73,7 @@ public class ProductManagement {
         for (Product product : products) {
             if (product.getId().equals(idToDelete)) {
                 products.remove(product);
+                ProductFile.saveToFile(products);
                 System.out.println("Xóa sản phẩm thành công!!!");
             }else {
                 System.out.println("Không tìm thấy sản phẩm với mã sản phẩm: " + idToDelete);

@@ -18,6 +18,10 @@ public class OrderManagement {
         return orders;
     }
 
+    public static void setOrders(List<Order> orders) {
+        OrderManagement.orders = orders;
+    }
+
     public static void createOrder() {
         ProductManagement.showProduct();
         Scanner scanner = new Scanner(System.in);

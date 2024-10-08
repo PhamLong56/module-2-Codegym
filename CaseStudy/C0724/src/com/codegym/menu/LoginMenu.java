@@ -1,10 +1,13 @@
 package com.codegym.menu;
 
 import com.codegym.entity.Employee;
+import com.codegym.entity.Order;
 import com.codegym.file.EmployeeFile;
+import com.codegym.file.OrderFile;
 import com.codegym.file.ProductFile;
 import com.codegym.management.AdminManagement;
 import com.codegym.management.EmployeeManagement;
+import com.codegym.management.OrderManagement;
 import com.codegym.management.ProductManagement;
 
 import java.util.InputMismatchException;
@@ -13,8 +16,8 @@ import java.util.Scanner;
 public class LoginMenu {
     public static void displayLoginMenu() {
         ProductManagement.setProducts(ProductFile.readFromFile());
-
         EmployeeManagement.setEmployees(EmployeeFile.readFromFile());
+        OrderManagement.setOrders(OrderFile.readFromFile());
         boolean isExit = false;
         while (!isExit) {
             System.out.println("============== VUI LÒNG CHỌN CHỨC NĂNG ================");

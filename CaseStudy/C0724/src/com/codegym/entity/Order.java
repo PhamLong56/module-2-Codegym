@@ -63,6 +63,14 @@ public class Order {
     public void setOrderDetails(List<OrderDetail> orderDetails) {
         this.orderDetails = orderDetails;
     }
+//    public String getInfo(){
+//        return String.format("%s,%s,%s,%s,%s \n",
+//                this.getIdOrder(),
+//                this.getCustomerName(),
+//                this.getCustomerPhone(),
+//                this.getCustomerEmail(),
+//                this.getOrderDetails());
+//    }
 
     @Override
     public String toString() {
