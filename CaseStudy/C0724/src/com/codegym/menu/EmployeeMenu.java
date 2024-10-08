@@ -15,8 +15,11 @@ public class EmployeeMenu {
             System.out.println("1. Hiển thị Menu");
             System.out.println("2. Tạo đơn đặt hàng");
             System.out.println("3. Hiển thị đơn đặt hàng");
+            System.out.println("4. Chỉnh sửa đơn đặt hàng");
+            System.out.println("5. Xóa đơn đặt hàng");
             System.out.println("0. Thoát");
-            System.out.println("Vui lòng chọn chức năng");
+            System.out.print("Vui lòng chọn chức năng: ");
+            System.out.println("\n");
             System.out.println("=======================================================");
             try {
 
@@ -32,6 +35,12 @@ public class EmployeeMenu {
                     case 3:
                         OrderManagement.showOrder();
                         break;
+                    case 4:
+                        OrderManagement.updateOrder();
+                        break;
+                    case 5:
+                        OrderManagement.deleteOrder();
+                        break;
                     case 0:
                         isExit = true;
                         break;
@@ -40,7 +49,7 @@ public class EmployeeMenu {
                 }
 
             } catch (InputMismatchException ei) {
-                System.out.println("Bạn đã nhập sai giá trị, xin nhập lại");
+                System.out.println("Bạn đã nhập sai giá trị, xin nhập lại !!!");
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }

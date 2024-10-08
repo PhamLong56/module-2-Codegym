@@ -4,25 +4,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
-    private Integer idOrder;
+    private static int orderCounter = 0;
+    private String idOrder;
     private String customerName;
     private String customerPhone;
     private String customerEmail;
     private List<OrderDetail> orderDetails = new ArrayList<>();
 
 
-    public Order(Integer idOrder, String customerName, String customerPhone, String customerEmail) {
-        this.idOrder = idOrder;
+    public Order(String customerName, String customerPhone, String customerEmail) {
+        this.idOrder = generateOrderId();
         this.customerName = customerName;
         this.customerPhone = customerPhone;
         this.customerEmail = customerEmail;
     }
 
-    public Integer getIdOrder() {
+    private String generateOrderId() {
+        orderCounter++;
+        return String.format("DH%03d", orderCounter);
+    }
+
+    public String getIdOrder() {
         return idOrder;
     }
 
-    public void setIdOrder(Integer idOrder) {
+    public void setIdOrder(String idOrder) {
         this.idOrder = idOrder;
     }
 
