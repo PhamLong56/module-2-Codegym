@@ -1,5 +1,7 @@
 package com.codegym.entity;
 
+import java.util.List;
+
 public class Product {
 
     private static int idDrinkCounter = 1;
@@ -43,6 +45,28 @@ public class Product {
         }else {
             throw new IllegalArgumentException("Xẩy ra lỗi, vui lòng chọn lại");
         }
+    }
+    public static void updateCounters(List<Product> productList) {
+        int maxDrinkId = 0;
+        int maxFoodId = 0;
+
+        for (Product product : productList) {
+            String id = product.getId();
+            if (id.startsWith("D")) {
+                int numericPart = Integer.parseInt(id.substring(1)); // Lấy phần số sau "D"
+                if (numericPart > maxDrinkId) {
+                    maxDrinkId = numericPart;
+                }
+            } else if (id.startsWith("F")) {
+                int numericPart = Integer.parseInt(id.substring(1)); // Lấy phần số sau "F"
+                if (numericPart > maxFoodId) {
+                    maxFoodId = numericPart;
+                }
+            }
+        }
+
+        Product.setIdDrinkCounter(maxDrinkId + 1); // Cập nhật bộ đếm đồ uống
+        Product.setIdFoodCounter(maxFoodId + 1);   // Cập nhật bộ đếm đồ ăn
     }
 
     public static int getIdDrinkCounter() {

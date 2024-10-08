@@ -13,6 +13,7 @@ import java.util.Scanner;
 public class LoginMenu {
     public static void displayLoginMenu() {
         ProductManagement.setProducts(ProductFile.readFromFile());
+
         EmployeeManagement.setEmployees(EmployeeFile.readFromFile());
         boolean isExit = false;
         while (!isExit) {

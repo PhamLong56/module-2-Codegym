@@ -2,3 +2,8 @@ D001-Bac siu-20000.0-cf sua-D|
 D002-cappuchino-30000.0-cf sua-D|
 F001-Banh mi cha Bo-15000.0-breakfast-F|
 D001-Hồng trà-22000.0-trà-D|
+D001-Tra chanh-10000.0-traf-D|
+D001-cocacoal-10000.0-dr-D|
+F001-banh bao-2000.0-banh-F|
+D003-pepsi-8000.0-dr-D|
+F002-banh u-2000.0-banh u-F|
