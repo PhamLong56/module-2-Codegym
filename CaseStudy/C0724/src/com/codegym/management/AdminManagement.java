@@ -5,6 +5,7 @@ import com.codegym.entity.Employee;
 import com.codegym.file.EmployeeFile;
 
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -44,6 +45,69 @@ public class AdminManagement {
         for (Employee employee : EmployeeManagement.getEmployees()) {
             System.out.println(employee.toString());
 
+        }
+    }
+    public static void updateEmployeeAccount() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập tên tài khoản nhân viên cần cập nhật: ");
+        String username = scanner.nextLine();
+
+        List<Employee> employees = EmployeeManagement.getEmployees();
+        Employee employeeToUpdate = null;
+
+        // Tìm tài khoản nhân viên
+        for (Employee employee : employees) {
+            if (employee.getUsername().equals(username)) {
+                employeeToUpdate = employee;
+                break;
+            }
+        }
+
+        if (employeeToUpdate != null) {
+            // Thực hiện cập nhật thông tin
+            System.out.println("Nhập tên tài khoản mới (hoặc nhấn Enter để bỏ qua): ");
+            String newUsername = scanner.nextLine();
+            if (!newUsername.isEmpty()) {
+                employeeToUpdate.setUsername(newUsername);
+            }
+
+            System.out.println("Nhập mật khẩu mới (hoặc nhấn Enter để bỏ qua): ");
+            String newPassword = scanner.nextLine();
+            if (!newPassword.isEmpty()) {
+                employeeToUpdate.setPassword(newPassword);
+            }
+
+            // Lưu thông tin cập nhật vào file
+            EmployeeFile.saveToFile(employees);
+            System.out.println("Cập nhật tài khoản nhân viên thành công.");
+        } else {
+            System.out.println("Không tìm thấy tài khoản nhân viên với tên tài khoản đã nhập.");
+        }
+    }
+
+
+    public static void deleteEmployeeAccount() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Nhập tên tài khoản nhân viên cần xóa: ");
+        String username = scanner.nextLine();
+
+        List<Employee> employees = EmployeeManagement.getEmployees();
+        Employee employeeToDelete = null;
+
+
+        for (Employee employee : employees) {
+            if (employee.getUsername().equals(username)) {
+                employeeToDelete = employee;
+                break;
+            }
+        }
+
+        if (employeeToDelete != null) {
+            employees.remove(employeeToDelete);
+            EmployeeFile.saveToFile(employees);
+            System.out.println("Xóa tài khoản nhân viên thành công.");
+        } else {
+            System.out.println("Không tìm thấy tài khoản nhân viên với tên tài khoản đã nhập.");
         }
     }
 }

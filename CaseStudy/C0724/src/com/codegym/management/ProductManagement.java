@@ -3,10 +3,8 @@ package com.codegym.management;
 import com.codegym.entity.Product;
 import com.codegym.file.ProductFile;
 
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Scanner;
+import java.text.NumberFormat;
+import java.util.*;
 
 public class ProductManagement {
     private static List<Product> products = new ArrayList<Product>();
@@ -59,8 +57,9 @@ public class ProductManagement {
         System.out.println("--------------------------MENU------------------------------");
         System.out.printf("%-10s%-30s%-10s%-10s\n", "ID", "Tên Sản Phẩm", "Giá", "Mô Tả");
         System.out.println("------------------------------------------------------------");
+        NumberFormat formatter = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
         for (Product product : products) {
-            System.out.printf("%-10s%-30s%-10s%-10s\n", product.getId(), product.getName(), product.getPrice(), product.getDescription());
+            System.out.printf("%-10s%-30s%-10s%-10s\n", product.getId(), product.getName(), formatter.format(product.getPrice()), product.getDescription());
         }
         System.out.println("--------------------------END------------------------------");
         System.out.println("------------------------------------------------------------");
@@ -112,7 +111,7 @@ public class ProductManagement {
         String name = scanner.nextLine().toLowerCase();
 
         boolean found = false;
-
+        NumberFormat formatter = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
         for (Product product : products) {
             if (product.getName().toLowerCase().contains(name.toLowerCase())) {
                 if(!found){
@@ -121,7 +120,7 @@ public class ProductManagement {
                     System.out.println("-----------------------------------------------------------");
                     found = true;
                 }
-                System.out.printf("%-10s%-20s%-10s%-10s\n", product.getId(), product.getName(), product.getPrice(), product.getDescription());
+                System.out.printf("%-10s%-20s%-10s%-10s\n", product.getId(), product.getName(), formatter.format(product.getPrice()), product.getDescription());
 
             }
         }

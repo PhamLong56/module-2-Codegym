@@ -6,10 +6,8 @@ import com.codegym.entity.OrderDetail;
 import com.codegym.entity.Product;
 import com.codegym.file.OrderFile;
 
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Scanner;
+import java.text.NumberFormat;
+import java.util.*;
 
 public class OrderManagement {
     private static List<Order> orders = new ArrayList<>();
@@ -37,7 +35,7 @@ public class OrderManagement {
             String productId;
             while (true) {
                 scanner = new Scanner(System.in);
-                System.out.println("========= TẠO MÓN =========");
+                System.out.println("========= CHỌN MÓN =========");
                 System.out.println("Nhập mã sản phẩm để chọn hoặc nhấn Enter để kết thúc: ");
                 productId = scanner.nextLine();
                 if (productId == null || productId.isEmpty()) {
@@ -74,8 +72,10 @@ public class OrderManagement {
                 }
             }
             System.out.println("Bạn đã chọn xong. Cám ơn! ");
+
             orders.add(order);
             OrderFile.saveToFile(orders);
+            showCurrentOrder(order);
 
 
         } catch (InputMismatchException ei) {
@@ -84,16 +84,52 @@ public class OrderManagement {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        OrderManagement.showOrder();
-
     }
 
+    private static String formatPrice(double price) {
+        NumberFormat formatter = NumberFormat.getCurrencyInstance(new Locale("vi", "VN"));
+        return formatter.format(price);
+    }
+
+
+    public static void showCurrentOrder(Order order) {
+        System.out.println("--------------ĐƠN HÀNG HIỆN TẠI-------------");
+
+        // Hiển thị thông tin khách hàng
+        String customerInfo = String.format("Mã đơn hàng: %s, Tên khách hàng: %s, Số điện thoại: %s, Email: %s",
+                order.getIdOrder(),
+                order.getCustomerName(),
+                order.getCustomerPhone(),
+                order.getCustomerEmail()
+        );
+        System.out.println(customerInfo);
+        System.out.println("---------------------------------------------------------");
+        System.out.printf("%-5s%-20s%-15s%-10s%-10s\n", "STT", "Tên Sản Phẩm", "Mã SP", "Số Lượng", "Giá");
+        System.out.println("---------------------------------------------------------");
+
+        // Hiển thị chi tiết sản phẩm trong đơn hàng
+        int i = 1;
+        double totalOrderPrice = 0;
+        for (OrderDetail od : order.getOrderDetails()) {
+            Product product = findProductById(od.getProductId());
+            if (product != null) {
+                double itemPrice = od.getPrice() * od.getQuantity();
+                totalOrderPrice += itemPrice;
+                System.out.printf("%-5s%-20s%-15s%-10d%-10s \n",
+                        i, product.getName(), product.getId(), od.getQuantity(), formatPrice(od.getPrice()));
+                i++;
+            } else {
+                System.out.println("Mã sản phẩm " + od.getProductId() + " không tồn tại trong hệ thống.");
+            }
+        }
+
+        System.out.println("---------------------------------------------------------");
+        System.out.printf("Tổng tiền của đơn: %s\n", formatPrice(totalOrderPrice));
+        System.out.println();
+    }
     public static void showOrder() {
         System.out.println("--------------ĐƠN HÀNG-------------");
-
         for (Order order : OrderManagement.getOrders()) {
-
-
             String customerInfo = String.format("Mã đơn hàng: %s, Tên khách hàng: %s, Số điện thoại: %s, Email: %s",
                     order.getIdOrder(),
                     order.getCustomerName(),
@@ -107,7 +143,6 @@ public class OrderManagement {
 
             int i = 1;
             double totalOrderPrice = 0;
-
             for (OrderDetail od : order.getOrderDetails()) {
                 if (od.getProductId() != null) {
                     System.out.println("---------------------------------------------------------");
@@ -115,8 +150,8 @@ public class OrderManagement {
                     if (product != null) {
                         double itemPrice = od.getPrice() * od.getQuantity();
                         totalOrderPrice += itemPrice;
-                        System.out.printf("%-5s%-20s%-15s%-10d%-10.2f \n",
-                                i, product.getName(), product.getId(), od.getQuantity(), od.getPrice());
+                        System.out.printf("%-5s%-20s%-15s%-10d%-10s \n",
+                                i, product.getName(), product.getId(), od.getQuantity(), formatPrice(od.getPrice()));
                         i++;
                     } else {
                         System.out.println("Mã sản phẩm " + od.getProductId() + " không tồn tại trong hệ thống.");
@@ -126,7 +161,7 @@ public class OrderManagement {
                 }
             }
             System.out.println("---------------------------------------------------------");
-            System.out.printf("Tổng tiền của đơn: %.2f\n", totalOrderPrice);
+            System.out.printf("Tổng tiền của đơn: %s\n", formatPrice(totalOrderPrice));
             System.out.println();
         }
     }

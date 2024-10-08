@@ -4,6 +4,7 @@ import com.codegym.file.EmployeeFile;
 import com.codegym.file.ProductFile;
 import com.codegym.management.AdminManagement;
 import com.codegym.management.EmployeeManagement;
+import com.codegym.management.OrderManagement;
 import com.codegym.management.ProductManagement;
 
 import java.util.InputMismatchException;
@@ -14,10 +15,11 @@ public class AdminMenu {
 
         boolean isExit = false;
         while (!isExit) {
-            System.out.println("============== QUYỀN QUẢN LÝ ================");
+            System.out.println("============== CHỨC NĂNG CỦA QUẢN LÝ ================");
             System.out.println("1. Quản lý nhân viên");
             System.out.println("2. Quản lý sản phẩm");
-            System.out.println("3. Thoát");
+            System.out.println("3. Xem các đơn hàng");
+            System.out.println("0. Thoát");
             System.out.println("Vui lòng chọn chức năng");
             try {
 
@@ -32,6 +34,9 @@ public class AdminMenu {
                         ProductMenu.displayProductMenu();
                         break;
                     case 3:
+                        OrderManagement.showOrder();
+                        break;
+                    case 0:
                         isExit = true;
                         break;
                     default:

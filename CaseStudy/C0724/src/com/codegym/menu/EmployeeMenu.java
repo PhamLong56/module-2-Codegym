@@ -18,12 +18,12 @@ public class EmployeeMenu {
             System.out.println("4. Chỉnh sửa đơn đặt hàng");
             System.out.println("5. Xóa đơn đặt hàng");
             System.out.println("0. Thoát");
-            System.out.print("Vui lòng chọn chức năng: ");
-            System.out.println("\n");
+            System.out.println("Vui lòng chọn chức năng: ");
             System.out.println("=======================================================");
             try {
 
                 Scanner scanner = new Scanner(System.in);
+                System.out.print("Chọn: ");
                 int choice = scanner.nextInt();
                 switch (choice) {
                     case 1:
