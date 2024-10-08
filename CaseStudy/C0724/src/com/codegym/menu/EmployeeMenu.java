@@ -11,12 +11,13 @@ public class EmployeeMenu {
     public static void displayMenuEmployee() {
         boolean isExit = false;
         while (!isExit) {
-            System.out.println("==============NHÂN VIÊN================");
+            System.out.println("============== CHỨC NĂNG CỦA NHÂN VIÊN================");
             System.out.println("1. Hiển thị Menu");
             System.out.println("2. Tạo đơn đặt hàng");
             System.out.println("3. Hiển thị đơn đặt hàng");
             System.out.println("0. Thoát");
             System.out.println("Vui lòng chọn chức năng");
+            System.out.println("=======================================================");
             try {
 
                 Scanner scanner = new Scanner(System.in);
@@ -35,7 +36,7 @@ public class EmployeeMenu {
                         isExit = true;
                         break;
                     default:
-                        System.out.println("Invalid choice");
+                        System.out.println("Vui lòng chọn lại !!!");
                 }
 
             } catch (InputMismatchException ei) {

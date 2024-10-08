@@ -12,24 +12,25 @@ public class AdminManagement {
     public static boolean verifyLogin() {
         Admin admin = new Admin();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a username ");
+        System.out.println("Nhập tài khoản người dùng: ");
         String username = scanner.nextLine();
-        System.out.println("Enter a password");
+        System.out.println("Nhập mật khẩu: ");
         String password = scanner.nextLine();
         if(admin.getUsername().equals(username) && admin.getPassword().equals(password)) {
-            System.out.println("You have successfully logged in");
+            System.out.println("Chúc mừng bạn đã đăng nhập thành công!");
             return true;
         }
-        System.out.println("Invalid username or password");
+        System.out.println("Tài khoản hoặc mật khẩu không đúng! Vui lòng nhập lại!");
         return false;
     }
     public static void addEmployeeAccount() {
 
         try{
             Scanner scanner = new Scanner(System.in);
-            System.out.println("Enter a username ");
+            System.out.println("=== Tạo Tài Khoản Cho Nhân Viên ===");
+            System.out.print("Tên tài khoản: ");
             String username = scanner.nextLine();
-            System.out.println("Enter a password");
+            System.out.print("Mật khẩu: ");
             String password = scanner.nextLine();
             EmployeeManagement.getEmployees().add(new Employee(username, password));
             EmployeeFile.saveToFile(EmployeeManagement.getEmployees());

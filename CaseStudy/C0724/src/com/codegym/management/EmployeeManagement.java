@@ -20,18 +20,18 @@ public class EmployeeManagement {
 
     public static Employee verifyLogin() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a username ");
+        System.out.println("Nhập tài khoản người dùng: ");
         String username = scanner.nextLine();
-        System.out.println("Enter a password");
+        System.out.println("Nhập mật khẩu: ");
         String password = scanner.nextLine();
         for (Employee employee : employees) {
             if (employee.getUsername().equals(username) && employee.getPassword().equals(password)) {
-                System.out.println( employee.getUsername()+ " have successfully logged in");
+                System.out.println( "Tài khoản của "+employee.getUsername()+ " đã đăng nhập thành công");
                 return employee;
             }
 
         }
-        System.out.println("Invalid username or password");
+        System.out.println("Tài khoản hoặc mật khẩu không đúng! Vui lòng nhập lại!");
         return null;
 
     }

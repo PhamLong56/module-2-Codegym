@@ -16,15 +16,16 @@ public class LoginMenu {
         EmployeeManagement.setEmployees(EmployeeFile.readFromFile());
         boolean isExit = false;
         while (!isExit) {
-            System.out.println("==============Đăng Nhập================");
-            System.out.println("1. Đăng nhập cho Manager");
-            System.out.println("2. Đăng nhập cho nhân viên bán hàng");
+            System.out.println("============== VUI LÒNG CHỌN CHỨC NĂNG ================");
+            System.out.println("1. Đăng nhập cho Quản lý");
+            System.out.println("2. Đăng nhập cho Nhân viên");
             System.out.println("3. Thoát");
-            System.out.println("Vui lòng chọn chức năng");
+            System.out.println("=======================================================");
 
             try {
 
                 Scanner scanner = new Scanner(System.in);
+                System.out.print("Chọn: ");
                 int choice = scanner.nextInt();
                 switch (choice) {
                     case 1:
@@ -42,11 +43,11 @@ public class LoginMenu {
                         isExit = true;
                         break;
                     default:
-                        System.out.println("Invalid choice");
+                        System.out.println("Vui lòng chọn lại !!!");
 
                 }
             } catch (InputMismatchException ei) {
-                System.out.println("Bạn đã nhập sai giá trị, xin nhập lại");
+                System.out.println("Bạn đã nhập sai giá trị, xin nhập lại!");
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }

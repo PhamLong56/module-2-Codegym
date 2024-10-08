@@ -41,7 +41,7 @@ public class Product {
         }else if(type.equals("F")){
             return "F" + String.format("%03d", idFoodCounter++);
         }else {
-            throw new IllegalArgumentException("Invalid type of product");
+            throw new IllegalArgumentException("Xẩy ra lỗi, vui lòng chọn lại");
         }
     }
 

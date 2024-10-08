@@ -14,7 +14,7 @@ public class AdminMenu {
 
         boolean isExit = false;
         while (!isExit) {
-            System.out.println("==============ADMIN================");
+            System.out.println("============== QUYỀN QUẢN LÝ ================");
             System.out.println("1. Quản lý nhân viên");
             System.out.println("2. Quản lý sản phẩm");
             System.out.println("3. Thoát");
@@ -22,6 +22,7 @@ public class AdminMenu {
             try {
 
                 Scanner scanner = new Scanner(System.in);
+                System.out.print("Chọn: ");
                 int choice = scanner.nextInt();
                 switch (choice) {
                     case 1:
@@ -34,11 +35,11 @@ public class AdminMenu {
                         isExit = true;
                         break;
                     default:
-                        System.out.println("Invalid choice");
+                        System.out.println("Vui lòng nhập lại!!!");
+                        break;
                 }
-
             } catch (InputMismatchException ei) {
-                System.out.println("Bạn đã nhập sai giá trị, xin nhập lại");
+                System.out.println("Bạn đã nhập sai giá trị, xin nhập lại!");
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }

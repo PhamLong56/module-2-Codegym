@@ -10,15 +10,18 @@ public class EmployeeMenuByManager {
     public static void displayMenuAdmin() {
         boolean isExit = false;
         while (!isExit) {
-            System.out.println("==============QUẢN LÝ NHÂN VIÊN================");
+            System.out.println("================ QUẢN LÝ NHÂN VIÊN =================");
             System.out.println("1. Thêm nhân viên");
             System.out.println("2. Xem danh sách nhân viên");
             System.out.println("3. Thoát");
-            System.out.println("Vui lòng chọn chức năng");
+            System.out.println("Vui lòng chọn chức năng:");
+            System.out.println("====================================================");
             try {
 
                 Scanner scanner = new Scanner(System.in);
+                System.out.print("Chọn: ");
                 int choice = scanner.nextInt();
+
                 switch (choice) {
                     case 1:
                         AdminManagement.addEmployeeAccount();
@@ -30,7 +33,8 @@ public class EmployeeMenuByManager {
                         isExit = true;
                         break;
                     default:
-                        System.out.println("Invalid choice");
+                        System.out.println("Vui lòng chọn lại !!!");
+                        break;
                 }
 
             } catch (InputMismatchException ei) {

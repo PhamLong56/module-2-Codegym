@@ -1,2 +1,5 @@
 cashier-12345|
 nhanvien1-nv123|
+nhanvien2-a12345|
+long-long1234|
+giahuy-jerry|

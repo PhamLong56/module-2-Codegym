@@ -1,3 +1,4 @@
-D001-Latte-25000.0-cf sua-D|
+D001-Bac siu-20000.0-cf sua-D|
 D002-cappuchino-30000.0-cf sua-D|
 F001-Banh mi cha Bo-15000.0-breakfast-F|
+D001-Hồng trà-22000.0-trà-D|

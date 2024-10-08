@@ -24,8 +24,9 @@ public class ProductManagement {
         try {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Nhập thông tin sản phẩm");
-            System.out.println("1. Thức uống (Drink): ");
-            System.out.println("2. Thức ăn (Food): ");
+            System.out.println("1. Thức uống: ");
+            System.out.println("2. Thức ăn: ");
+            System.out.print("Chọn: ");
             int choiceType = scanner.nextInt();
             scanner.nextLine();
             String type = "";
@@ -67,14 +68,14 @@ public class ProductManagement {
 
     public static void deleteProduct() {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Nhập ID sản phẩm cần xóa: ");
+        System.out.print("Nhập mã sản phẩm cần xóa: ");
         String idToDelete = scanner.nextLine();
         for (Product product : products) {
             if (product.getId().equals(idToDelete)) {
                 products.remove(product);
-                System.out.println("Xóa sản phẩm thành công.");
+                System.out.println("Xóa sản phẩm thành công!!!");
             }else {
-                System.out.println("Không tìm thấy sản phẩm với ID: " + idToDelete);
+                System.out.println("Không tìm thấy sản phẩm với mã sản phẩm: " + idToDelete);
             }
         }
 
@@ -100,7 +101,7 @@ public class ProductManagement {
                 System.out.println("Đã cập nhật thành công");
                 ProductFile.saveToFile(products);
             }else {
-                System.out.println("Id: " + idToUpdate + " không có trong menu");
+                System.out.println("Mã sản phẩm: " + idToUpdate + " không có trong dánh menu");
             }
         }
     }
@@ -116,7 +117,7 @@ public class ProductManagement {
 
 
         for (Product product : products) {
-            if (product.getName().toLowerCase().contains(name)) {
+            if (product.getName().toLowerCase().contains(name.toLowerCase())) {
 
                 System.out.printf("%-10s%-20s%-10s%-10s\n", product.getId(), product.getName(), product.getPrice(), product.getDescription());
                 found = true;

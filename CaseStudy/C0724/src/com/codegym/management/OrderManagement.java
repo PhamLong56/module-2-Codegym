@@ -19,27 +19,29 @@ public class OrderManagement {
     }
     public static void createOrder() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Đặt hàng");
+        System.out.println("===== THÔNG TIN ĐƠN HÀNG =====");
         try {
             System.out.println("Nhập mã đặt hàng");
             int idOrder = scanner.nextInt();
             scanner.nextLine();
-            System.out.println("Nhập tên khách hàng");
+            System.out.println("Nhập tên khách hàng: ");
             String nameCustomer = scanner.nextLine();
-            System.out.println("Nhập số điện thoại khách hàng");
+            System.out.println("Nhập số điện thoại khách hàng: ");
             String phoneCustomer = scanner.nextLine();
-            System.out.println("Nhập số email mail khách hàng");
+            System.out.println("Nhập số email của khách hàng: ");
             String emailCustomer = scanner.nextLine();
             Order order = new Order(idOrder, nameCustomer, phoneCustomer, emailCustomer);
             String productId;
             while (true) {
                 scanner = new Scanner(System.in);
-                System.out.println("Nhập mã sản phẩm");
+                System.out.println("========= TẠO MÓN =========");
+                System.out.println("Nhập mã sản phẩm để chọn hoặc nhấn Enter để kết thúc: ");
                 productId = scanner.nextLine();
                 if (productId == null || productId.isEmpty()) {
+                    System.out.println("Bạn đã chọn xong. Cám ơn! ");
                     break;
                 }
-                System.out.println("Nhập số lượng cần mua");
+                System.out.println("Nhập số lượng cần mua: ");
                 int quantity = scanner.nextInt();
                 scanner.nextLine();
 
@@ -87,7 +89,7 @@ public class OrderManagement {
 
 
 
-            String customerInfo = String.format("ID đơn: %s, Tên khách hàng: %s, Số điện thoại: %s, Email: %s",
+            String customerInfo = String.format("Mã đơn hàng: %s, Tên khách hàng: %s, Số điện thoại: %s, Email: %s",
                     order.getIdOrder(),
                     order.getCustomerName(),
                     order.getCustomerPhone(),
@@ -111,7 +113,7 @@ public class OrderManagement {
                                 i, product.getName(), od.getPrice(), od.getQuantity());
                         i++;
                     } else {
-                        System.out.println("Sản phẩm với ID " + od.getProductId() + " không tồn tại trong hệ thống.");
+                        System.out.println("Mã sản phẩm " + od.getProductId() + " không tồn tại trong hệ thống.");
                     }
                 } else {
                     System.out.println("Sản phẩm không tồn tại!");
