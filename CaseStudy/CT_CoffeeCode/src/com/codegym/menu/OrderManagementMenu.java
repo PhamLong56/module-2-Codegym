@@ -1,8 +1,8 @@
-package com.codegym.management;
+package com.codegym.menu;
 
 import com.codegym.entity.Order;
 
-public class OrderManagement {
+public class OrderManagementMenu {
     Order order;
 
     public void createOrder() {

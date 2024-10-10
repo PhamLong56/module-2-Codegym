@@ -1,8 +1,6 @@
-package com.codegym.management;
+package com.codegym.menu;
 
-import com.codegym.entity.Invoice;
-
-public class InvoiceManagement {
+public class InvoiceManagementMenu {
 
 
     public void generateInvoice() {

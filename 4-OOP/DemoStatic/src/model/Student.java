@@ -1,3 +1,5 @@
+package model;
+
 public class Student {
     private String name;
     private int id;
@@ -10,7 +12,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "model.Student{" +
                 "name='" + name + '\'' +
                 ", id=" + id +
                 ", school='" + school + '\'' +
@@ -25,7 +27,7 @@ public class Student {
         private String username;
         private String password;
 
-        Account(String username, String password) {
+        public Account(String username, String password) {
             this.username = username;
             this.password = password;
         }
@@ -40,3 +42,4 @@ public class Student {
 
     }
 }
+

@@ -1,8 +1,8 @@
-package com.codegym.management;
+package com.codegym.menu;
 
 import com.codegym.entity.Report;
 
-public class ReportManagement {
+public class ReportManagementMenu {
     Report report;
 
     public void generateReport() {

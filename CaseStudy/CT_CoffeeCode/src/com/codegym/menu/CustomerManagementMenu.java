@@ -1,15 +1,5 @@
-package com.codegym.management;
+package com.codegym.menu;
 
-import com.codegym.entity.Customer;
+public class CustomerManagementMenu {
 
-public class CustomerManagement {
-
-    public void order(){
-
-    }
-    public void payMoney(){
-
-    }
-    public void checkLoyaltyPoints(){
-    }
 }

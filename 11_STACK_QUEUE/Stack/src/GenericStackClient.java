@@ -19,6 +19,7 @@ public class GenericStackClient {
         }
         System.out.println("\n3.3 Size of stack after pop operation: "+stack.size());
     }
+
     private static void stackOfIntegers(){
         MyGenericStack<Integer> stack = new MyGenericStack<>();
         stack.push(5);

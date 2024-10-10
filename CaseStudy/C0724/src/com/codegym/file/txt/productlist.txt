@@ -1,3 +1,4 @@
-D002-Cappuchino-20000.0-cf sữa-D|
-D003-Cà phê Đen đá -15000.0-100% robusta-D|
-F001-Bánh Pudding-5000.0-bánh kem-F|
+D002-Cappuchino-25000.0-cf-D|
+D004-Latte-30000.0-cf-D|
+D006-Cafe Black-20000.0-cf-D|
+D007-Tea Peach-23000.0-drink-D|

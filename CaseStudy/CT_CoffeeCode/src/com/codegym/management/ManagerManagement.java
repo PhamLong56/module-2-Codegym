@@ -2,9 +2,7 @@ package com.codegym.management;
 
 import com.codegym.entity.Manager;
 
-public class ManagerManagment {
-    Manager manager1 = new Manager();
-    Manager manager2 = new Manager();
+public class ManagerManagement {
 
     public void createEmployee() {}
     public void manageEmployee() {}

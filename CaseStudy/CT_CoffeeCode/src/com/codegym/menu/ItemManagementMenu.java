@@ -1,5 +1,5 @@
-package com.codegym.management;
+package com.codegym.menu;
 
-public class ItemManagement {
+public class ItemManagementMenu {
 
 }

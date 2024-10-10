@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5bb72a7d-6346-4f20-9bd7-7527c5f5f656" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../1.Introduction/Demo/src/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.Introduction/Demo/src/Demo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.Introduction/Demo/src/Demo3.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.Introduction/Demo/src/Demo3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.Introduction/Demo/src/Interest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.Introduction/Demo/src/Interest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.Introduction/Demo/src/demo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.Introduction/Demo/src/demo2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.Introduction/Demo/src/demo4.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.Introduction/Demo/src/demo4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.Introduction/Demo/src/demo5_testbreak.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.Introduction/Demo/src/demo5_testbreak.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.Introduction/Demo/src/demo6_testContinue.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.Introduction/Demo/src/demo6_testContinue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.Introduction/Demo/src/demooooo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.Introduction/Demo/src/demooooo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.Introduction/system_time/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.Introduction/system_time/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-DSA-List/MyList/src/MyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../10-DSA-List/MyList/src/MyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-DSA-List/MyList/src/MyListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../10-DSA-List/MyList/src/MyListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11_STACK_QUEUE/Stack/src/GenericStackClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../11_STACK_QUEUE/Stack/src/GenericStackClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../14.ThuatToan_SapXep/BubbleSort/src/BubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../14.ThuatToan_SapXep/BubbleSort/src/BubbleSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../2.LoopInJava/interest-calculator/src/InterestCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../2.LoopInJava/interest-calculator/src/InterestCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../3-Array/find-min-array/src/NumberMinArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../3-Array/find-min-array/src/NumberMinArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../4-OOP/Circle/src/New.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../4-OOP/Circle/src/New.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../4-OOP/Circle/src/SimpleCircle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../4-OOP/Circle/src/SimpleCircle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../4-OOP/Circle/src/TestSimpleCircle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../4-OOP/Circle/src/TestSimpleCircle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../4-OOP/Customer/src/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../4-OOP/Customer/src/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../4-OOP/DemoStatic/src/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../4-OOP/DemoStatic/src/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../4-OOP/DemoStatic/src/pkg/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../4-OOP/DemoStatic/src/pkg/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/CoffeeCODE/src/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudy/CoffeeCODE/src/model/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/CoffeeCODE/src/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudy/CoffeeCODE/src/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/CoffeeCODE/src/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudy/CoffeeCODE/src/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/CoffeeCODE/src/model/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudy/CoffeeCODE/src/model/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/CoffeeCODE/src/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudy/CoffeeCODE/src/model/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../CaseStudy/CoffeeCODE/src/view/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../CaseStudy/CoffeeCODE/src/view/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2mVUsDR3codnBqmsjhIBwAo5ODV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/phamlong/CODEGYM/module-2/13-ThuatToan/BT/src/Main.java",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.22855.74" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.22855.74" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5bb72a7d-6346-4f20-9bd7-7527c5f5f656" name="Changes" comment="" />
+      <created>1727161442809</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727161442809</updated>
+      <workItem from="1727161443867" duration="4217000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
